@@ -1,0 +1,99 @@
+
+/* 公共的类 */
+
+.no-border-radius{
+    border-radius: 0px
+}
+
+body{
+    font-size: 62.5%
+}
+
+#header{
+    width: 100%;
+    height: 8rem;
+    padding: 0px 5rem;
+    line-height: 8rem;
+    font-size: 2rem;
+    background-color: transparent
+}
+
+#header nav > a[href="#Menu"]{
+    text-decoration: none;
+}
+
+#header nav > a[href="#Menu"]::before{
+    content: "☰";
+    font-size: 3rem;
+    color: #eeeeee;
+}
+
+#banner{
+    width: 100%;
+    height: 56rem;
+    padding-top: 3rem;
+    background-image: url(../images/banner.jpg);
+    background-position: center center
+}
+
+#banner p{
+    margin: 3rem 0;
+}
+
+#one{
+    width: 100%;
+    min-height: 40rem;
+    padding-top: 5rem;
+    background-color: transparent
+}
+
+#one .row .col-md-12{
+    padding-top: 2rem;
+}
+
+/* #one .row .col-md-12+.col-md-12{
+    margin-top: 2rem;
+} */
+
+#one .img-responsive{
+    display: inline-block;
+    border-radius: 50%;
+} 
+
+#two{
+    width: 100%;
+    min-height: 30rem;
+    padding-top: 6rem;
+    color: white;
+    background-color: #f6755e
+}
+
+#three{
+    width: 100%;
+    min-height: 40rem;
+    padding-top: 9rem;
+    background-color: transparent
+}
+
+footer{
+    width: 100%;
+    min-height: 30rem;
+    padding-top: 5rem;
+    background-color: #25a2c3
+}
+
+footer ul{
+    list-style: none
+}
+
+footer ul li{
+    display: inline-block
+}
+
+footer ul li+li{
+    margin-left: 3rem;
+}
+
+footer ul li a:hover{
+    text-decoration: none
+}
