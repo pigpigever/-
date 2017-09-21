@@ -9,6 +9,19 @@ body{
     font-size: 62.5%
 }
 
+@media screen and (min-width:992px){
+    #one>.container>.row>div:nth-child(1){
+        text-align: right
+    }
+    #one>.container>.row>div:nth-child(3){
+        text-align: left
+    }
+
+    #three>.container>.row>div{
+        text-align: left
+    }
+}
+
 #header{
     width: 100%;
     height: 8rem;
@@ -51,10 +64,6 @@ body{
     padding-top: 2rem;
 }
 
-/* #one .row .col-md-12+.col-md-12{
-    margin-top: 2rem;
-} */
-
 #one .img-responsive{
     display: inline-block;
     border-radius: 50%;
@@ -73,6 +82,10 @@ body{
     min-height: 40rem;
     padding-top: 9rem;
     background-color: transparent
+}
+
+#three .img-responsive{
+    width: 100%
 }
 
 footer{
