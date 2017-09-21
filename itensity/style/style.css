@@ -31,26 +31,64 @@ body{
     background-color: transparent
 }
 
-#header nav > a[href="#Menu"]{
+#header > .logo{
+    color: #f6755e;
+    font-size: 5rem;
+    font-weight: 600;
+    font-family: 'Cedarville Cursive', cursive;
+}
+
+#header > .logo:hover{
+    text-decoration: none
+}
+
+#header nav > a[href="#menu"]{
     text-decoration: none;
 }
 
-#header nav > a[href="#Menu"]::before{
+#header nav > a[href="#menu"]::before{
     content: "☰";
     font-size: 3rem;
     color: #eeeeee;
 }
 
+#header nav > a[href="#login"]{
+    width: 10rem;
+    height: 4rem;
+    line-height: 2.5rem;
+}
+
 #banner{
     width: 100%;
     height: 56rem;
-    padding-top: 3rem;
+    padding-top: 20rem;
     background-image: url(../images/banner.jpg);
     background-position: center center
 }
 
+#banner h1{
+    font-size: 5rem;
+    font-weight: 600;
+    color: #25a2c3;
+}
+
 #banner p{
     margin: 3rem 0;
+    color: #b3abab;
+    font-size: 2rem;
+}
+
+#banner button{
+    width: 24rem;
+    height: 6rem;
+    background-color: #f6755e;
+    
+    color: white;
+    font-weight: bolder;
+}
+
+#banner button:hover{
+    background-color: #f78a76;
 }
 
 #one{
@@ -86,6 +124,10 @@ body{
 
 #three .img-responsive{
     width: 100%
+}
+
+#three h3{
+    color:#25a2c3;
 }
 
 footer{
