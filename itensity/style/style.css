@@ -6,20 +6,16 @@
 }
 
 body{
-    font-size: 62.5%
+    font-size: 62.5%;
+    font-family: 'Catamaran', sans-serif;
+    color: #666666;
+    /* min-width: 35.3rem; */
 }
 
-@media screen and (min-width:992px){
-    #one>.container>.row>div:nth-child(1){
-        text-align: right
-    }
-    #one>.container>.row>div:nth-child(3){
-        text-align: left
-    }
-
-    #three>.container>.row>div{
-        text-align: left
-    }
+h1,h2,h3,h4,h5,h6{
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 1rem;
 }
 
 #header{
@@ -52,37 +48,89 @@ body{
     color: #eeeeee;
 }
 
+#header nav > a[href="menu"]:target{
+    display: block;
+}
+
 #header nav > a[href="#login"]{
     width: 10rem;
     height: 4rem;
     line-height: 2.5rem;
 }
 
+@media screen and (max-width: 992px){
+    #header{
+        height: 4rem;
+        line-height: 4rem;
+    }
+
+    #header > .logo{
+        font-size: 2.6rem;
+    }
+
+    #header nav > a[href="#login"]{
+        display: none;
+    }
+
+    #header nav > a[href="#menu"]::before{
+        margin-left: -5rem;
+    }
+}
+
+#menu{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -25rem;
+    bottom: 0;
+    width: 25rem;
+    height: 100%;
+    padding: 1.5rem 1.5rem 0 4rem;
+    z-index: 500;
+    text-align: left;
+    font-size: 1.6rem;
+    color: white;
+    background-color: #25a2c3
+}
+
+#menu > .row > div{
+    padding: 1.5rem 0;
+}
+
+#menu > .row > div+div{
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+}
+
+
+
 #banner{
-    width: 100%;
-    height: 56rem;
-    padding-top: 20rem;
+    max-height: 56rem;
+    padding:15rem 0;
     background-image: url(../images/banner.jpg);
-    background-position: center center
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: center
 }
 
 #banner h1{
     font-size: 5rem;
-    font-weight: 600;
+    font-weight: 700;
     color: #25a2c3;
 }
 
 #banner p{
     margin: 3rem 0;
-    color: #b3abab;
-    font-size: 2rem;
+    font-size: 2.0rem;
 }
 
 #banner button{
-    width: 24rem;
-    height: 6rem;
+    width: 20rem;
+    height: 5rem;
     background-color: #f6755e;
-    
+    transition: background-color .5s;
+    -webkit-transition: background-color .5s;
     color: white;
     font-weight: bolder;
 }
@@ -91,34 +139,145 @@ body{
     background-color: #f78a76;
 }
 
+@media screen and (max-width:992px){
+    #banner{
+        padding:10rem 0;
+    }
+    #banner h1{
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width:768px){
+    #banner{
+        padding: 2rem 2rem;
+    }
+    #banner h1{
+        font-size: 3rem;
+    }
+    #banner p{
+        font-size: 1.8rem;
+    }
+    #banner button{
+        width: 24rem;
+        height: 5rem;
+    }
+}
+
+@media screen and (max-width: 328px){
+    #banner{
+        padding: 2rem 2rem;
+    }
+    #banner h1{
+        font-size: 2rem;
+    }
+    #banner p{
+        font-size: 1.4rem;
+    }
+    #banner button{
+        width: 15rem;
+        height: 4rem;
+    }
+}
+
 #one{
     width: 100%;
     min-height: 40rem;
-    padding-top: 5rem;
+    padding: 3rem 0;
     background-color: transparent
 }
 
-#one .row .col-md-12{
-    padding-top: 2rem;
+#one>.container>.row>div:nth-child(1){
+    text-align: right
+}
+#one>.container>.row>div:nth-child(3){
+    text-align: left
+}
+
+#one h3{
+    font-size: 2rem;
+    color: #25a2c3
+}
+
+#one p{
+    font-size: 1.8rem;
 }
 
 #one .img-responsive{
     display: inline-block;
     border-radius: 50%;
-} 
+}
+
+#one > .container > .row > .col-md-4>div:nth-child(2){
+    margin-top: 9.667rem;
+}
+
+@media screen and (max-width:1200px){
+    #one > .container > .row > .col-md-4>div:nth-child(2){
+        margin-top: 7.9452rem;
+    }
+    #one p{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:992px){
+    #one>.container>.row>div:nth-child(1),
+    #one>.container>.row>div:nth-child(3){
+        text-align: center
+    }
+    #one > .container > .row > .col-md-4>div:nth-child(2){
+        margin-top: 0;
+    }
+
+    #one p{
+        /* margin-bottom: 0; */
+        /* white-space:nowrap;   */
+    }
+}
 
 #two{
-    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    width: 20000px;
     min-height: 30rem;
-    padding-top: 6rem;
+    padding: 5rem 0;
     color: white;
     background-color: #f6755e
+}
+
+#two > .container{
+    /* display: inline-block !important; */
+    vertical-align: middle;
+}
+#two > .container > p:nth-child(3){
+    margin-top: 2rem;
+    color: white;
+    font-weight: 600
+}
+
+#two p{
+    font-size: 1.8rem;
+}
+
+@media screen and (max-width: 992px){
+    #two{
+        padding: 2rem 0;
+    }
+
+    #two h2{
+        font-size: 2.2rem;
+    }
+
+    #two p{
+        font-size: 1.4rem;
+    }
 }
 
 #three{
     width: 100%;
     min-height: 40rem;
-    padding-top: 9rem;
+    padding: 8rem 0;
     background-color: transparent
 }
 
@@ -130,25 +289,80 @@ body{
     color:#25a2c3;
 }
 
+#three p{
+    font-size: 2.0rem;
+    color: #b3abab;
+}
+
+#three>.container>.row>div{
+    text-align: left
+}
+
+@media screen and (max-width:1200px){
+    #three h3{
+        font-size: 2rem;
+    }
+
+    #three p{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:992px){
+    #three{
+        padding: 4rem 0 2rem 0;
+    }
+
+    #three > .container > .row > div{
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #three{
+        padding: 3rem 0 0 0;
+    }
+    #three > .container > .row > div{
+        margin-bottom: 3rem;
+    }
+}
+
 footer{
-    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    width: 2000rem;
     min-height: 30rem;
-    padding-top: 5rem;
+    padding: 5rem 0;
+    text-align: center;
     background-color: #25a2c3
 }
 
-footer ul{
-    list-style: none
+footer h2{
+    color: white;
 }
 
-footer ul li{
-    display: inline-block
+footer > .container > .row > div{
+    font-size: 1.6rem;
+    color: white;
 }
 
-footer ul li+li{
-    margin-left: 3rem;
+footer > .container > .row > div span{
+    vertical-align: middle;
 }
 
-footer ul li a:hover{
-    text-decoration: none
+footer > .container > .copyright{
+    display: inline-block;
+    width: 50%;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    color: white;
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width: 992px){
+    footer > .container > .row > div:nth-child(3){
+        display: inline-block;
+    }
 }
