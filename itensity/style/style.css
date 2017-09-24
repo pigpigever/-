@@ -78,20 +78,27 @@ h1,h2,h3,h4,h5,h6{
 }
 
 #menu{
-    display: none;
     position: fixed;
-    top: 0;
-    left: -25rem;
-    bottom: 0;
     width: 25rem;
     height: 100%;
+    top: 0;
+    bottom: 0;
+    left:-25rem;
     padding: 1.5rem 1.5rem 0 4rem;
     z-index: 500;
     text-align: left;
     font-size: 1.6rem;
     color: white;
-    background-color: #25a2c3
+    overflow: hidden;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    background-color: #25a2c3;
 }
+
+.toggled #menu{
+    left: 0;
+}
+
 
 #menu > .row > div{
     padding: 1.5rem 0;
@@ -101,8 +108,6 @@ h1,h2,h3,h4,h5,h6{
     border-top: 1px solid rgba(255, 255, 255, 0.25);
 
 }
-
-
 
 #banner{
     max-height: 56rem;

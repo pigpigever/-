@@ -2,23 +2,11 @@
 $(function () {
 
     $("#header nav a[href='#menu']").click(function () {
-        $("#menu").show().animate({
-            left: '0'
-        })
+         $("body").addClass("toggled")
+         console.log($("#menu").attr("id"))
     })
 
-    $(".gg").click(function () {
-        var width = $("#menu").outerWidth()
-        $("#menu").show().animate({
-            left: `-${width}px`
-        })
+    $("#menu > div:nth-child(1)").click(function(){
+        $("body").removeClass("toggled")
     })
-
-    // $("*:not()").on("click", function () {
-    //     var width = $("#menu").outerWidth()
-    //     $("#menu").show().animate({
-    //         left: `-${width}px`
-    //     })
-    //     console.log(width)
-    // })
 })
