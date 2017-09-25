@@ -13,7 +13,9 @@ body{
 }
 
 @media screen and (max-width: 992px){
-    padding-top: 4rem;
+    body{
+        padding-top: 4rem;
+    }
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -33,6 +35,7 @@ h1,h2,h3,h4,h5,h6{
     font-size: 2rem;
     background-color: white;
 }
+
 
 #header > .logo{
     color: #f6755e;
@@ -117,13 +120,29 @@ h1,h2,h3,h4,h5,h6{
 }
 
 #banner{
-    max-height: 56rem;
-    padding:15rem 0;
+    /* max-height: 56rem; */
+    padding:15rem 0 13rem 0;
     background-image: url(../images/banner.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center top;
     text-align: center
+}
+
+#banner .content{
+    -moz-transition: opacity 1s ease-in-out, -moz-transform 0.75s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out, -webkit-transform 0.75s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out, -ms-transform 0.75s ease-in-out;
+    transition: opacity 1s ease-in-out, transform 0.75s ease-in-out;
+    opacity: 1;
+}
+
+.is-loading #banner .content{
+    opacity: 0;
+    -moz-transform: translateY(1rem);
+    -webkit-transform: translateY(1rem);
+    -ms-transform: translateY(1rem);
+    transform: translateY(1rem);
 }
 
 #banner h1{
