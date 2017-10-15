@@ -64,12 +64,6 @@ body{
     box-shadow: 0 0 0 1em #FFF;
     cursor: default;
 }
-/* 
-*, *::before, *::after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-} */
 
 #header.hide .inner, #header.preview .inner{
     height: 6em;
@@ -101,7 +95,7 @@ body{
     color: #fff;
 }
 
-#header .inner .content h2 {
+#header .inner .content p {
     font-size: 1.5em;
     color: #fff;
     margin: 0 0 1em 0;
@@ -172,6 +166,36 @@ input[type="submit"], input[type="reset"], input[type="button"], button, .button
     cursor: pointer;
 }
 
+@media screen and (max-width: 736px){
+
+    #header .inner{
+        width: 17em;
+        height: 17em;
+        padding: 2em;
+    }
+
+    #header .inner .content h1 {
+        font-size: 3.2em;
+        font-family: 'Pattaya', sans-serif;
+        margin: 0 0 .25em 0;
+        color: #fff;
+    }
+
+    #header .inner .content p {
+        font-size: 1.5em;
+        color: #fff;
+        margin: 0 0 1em 0;
+    }
+
+    #header .inner .button {
+        width: 2.5em;
+        height: 2.5em;
+        line-height: 2.5em;
+        text-align: center
+    }
+    
+}
+
 #main{
     padding: 2em;
 }
@@ -212,7 +236,11 @@ input[type="submit"], input[type="reset"], input[type="button"], button, .button
 
 .image.fit{
     display: block;
-    margin: 0 0 2em 0;
+    /* margin: 0 0 2em 0; */
+    width: 100%;
+}
+
+.image.fit img{
     width: 100%;
 }
 
@@ -223,6 +251,26 @@ input[type="submit"], input[type="reset"], input[type="button"], button, .button
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
     border: 0;
-    display: inline-block;
-    position: relative;
+    /* display: inline-block;
+    position: relative; */
+}
+
+@media screen and (max-width: 736px) {
+    
+    .columns {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+
+}
+    
+@media screen and (max-width: 480px) {
+
+    .columns {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+
 }
