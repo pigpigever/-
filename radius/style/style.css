@@ -282,7 +282,7 @@ input[type="submit"], input[type="reset"], input[type="button"], button, .button
     position: fixed;
     color: white;
     left: 0;
-    bottom: -22em;
+    bottom: -24em;
     transition:bottom 0.2s ease;
     -webkit-transition:bottom 0.2s ease;
     -moz-transition:bottom 0.2s ease;
@@ -303,7 +303,6 @@ input[type="submit"], input[type="reset"], input[type="button"], button, .button
     width: 4em;
     height: 4em;
     top:2em;
-    left: 48.5%;
     text-decoration: none;
     border-radius: 100%;
     cursor: pointer;
