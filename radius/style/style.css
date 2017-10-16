@@ -251,8 +251,6 @@ input[type="submit"], input[type="reset"], input[type="button"], button, .button
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
     border: 0;
-    /* display: inline-block;
-    position: relative; */
 }
 
 @media screen and (max-width: 736px) {
@@ -273,4 +271,123 @@ input[type="submit"], input[type="reset"], input[type="button"], button, .button
         column-count: 1;
     }
 
+}
+
+#footer.show{
+    bottom: 0;
+}
+
+#footer{
+    width: 100%;
+    position: fixed;
+    color: white;
+    left: 0;
+    bottom: -22em;
+    transition:bottom 0.2s ease;
+    -webkit-transition:bottom 0.2s ease;
+    -moz-transition:bottom 0.2s ease;
+    -ms-transition:bottom 0.2s ease;
+    -o-transition:bottom 0.2s ease;
+    text-align: center;
+    z-index: 9999;
+}
+
+#footer h2{
+    font-weight: 300;
+}
+
+#footer > a{
+    content: '';
+    display: inline-block;
+    position: relative;
+    width: 4em;
+    height: 4em;
+    top:2em;
+    left: 48.5%;
+    text-decoration: none;
+    border-radius: 100%;
+    cursor: pointer;
+    text-align: center;
+    background: #e74c3c
+}
+
+#footer > a > i{
+    /* position: relative; */
+    top: 0.5em;
+    font-size: 1.5em;
+    color: #FFF;
+}
+
+#footer > .inner{
+    display: flex;
+    position: relative;
+    height: 20em;
+    padding: 2em;
+    justify-content: center;
+    align-items: stretch;
+    background: #e74c3c;
+    z-index: 10003;
+}
+
+#footer .inner .left,#footer .inner .right{
+    width: 50%;
+    padding: 2em;
+    text-align: left;
+    font-size: 1.3em;
+    display: inline-block;
+}
+
+.icon{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 1em;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.icon > li{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon > li+li{
+    margin-left: 1em;
+}
+
+.icon > li > i{
+    font-size: 1.8em;
+}
+
+.copyright{
+    font-size: 0.9em;
+}
+
+@media screen and (max-width: 980px){
+
+    #footer{
+        position: relative;
+        bottom: 0;
+    }
+
+    #footer > a{
+        display: none;
+    }
+
+    #footer p{
+        margin: 0;
+    }
+
+    #footer > .inner{
+        display: block;
+        height: auto;
+    }
+
+    #footer > .inner > .left,#footer > .inner > .right{
+        /* display: block; */
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
 }
