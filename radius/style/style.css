@@ -390,3 +390,14 @@ input[type="submit"], input[type="reset"], input[type="button"], button, .button
         text-align: center;
     }
 }
+
+@media screen and (max-width: 480px){
+    #footer .inner{
+        padding: 2em;
+    }
+
+    #footer .inner .left,
+    #footer .inner .right,{
+        padding: 1em;
+    }
+}
