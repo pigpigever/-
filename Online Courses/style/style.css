@@ -1,0 +1,128 @@
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+}
+body{
+    font-size: 16px;
+}
+
+.col-md-12,.row{
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+#header{
+    max-width: 100%;
+    min-height: 65px;
+    
+    padding: 15px 10px 0 10px;
+    line-height: 65px;
+    background: black;
+}
+
+
+.content {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+#header .logo{
+    width: 230px;
+}
+
+#header .logo img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#header .content ul{
+    /* margin: 0;
+    padding: 0; */
+    overflow: hidden;
+    list-style: none;
+}
+
+#header .content ul > li{
+    /* display: inline-block; */
+    float: left;
+    padding: 0 16px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer
+}
+
+#header .content ul > li.active{
+    background: #ffc21f;
+}
+
+#header .content ul > li:hover{
+    background: #ffc21f
+}
+
+#header .content ul a{
+    height: 35px;
+    line-height: 35px;
+    text-decoration: none;
+    color: white;
+}
+
+#header .content  ul a:hover{
+    color: black;
+}
+
+@media screen and (max-width: 640px){
+    #header .logo{
+        width: 110px;
+    }
+
+    #header .content ul > li > a{
+        font-size: 12px;
+        line-height: 12px;
+    }
+}
+
+@media screen and (max-width: 366px){
+    #header .content {
+        /* width: 100%; */
+    }
+}
+
+#banner{
+    width: 100%;
+    height: 350px;
+    /* background: blue; */
+    background: url(../images/banner.jpg) no-repeat center center;
+}
+
+#banner h1{
+    padding-bottom: 21px;
+    font-weight: 700;
+    font-size: 55px;
+}
+
+#banner p{
+    padding-bottom: 55px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+#banner h1,#banner p{
+    color: #231f20;
+}
+
+#banner > .form-horizontal > .form-group > input{
+    border: none;
+    border-radius: none;
+    box-shadow: none;
+}
+
+#banner > .form-horizontal > .form-group > input:focus{
+    /* border: none; */
+}
