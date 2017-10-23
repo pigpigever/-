@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        form {
+            width: 400px;
+            margin: 100px auto;
+            font-family: Arial;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        fieldset{
+            border: 1px solid silver;
+        }
+
+        div {
+            overflow: hidden
+        }
+
+        label {
+            float: left;
+            width: 60px;
+            height: 40px;
+            line-height: 40px;
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        input:not(#submit) {
+            float: left;
+            height: 16px;
+            padding: 10px;
+            border: 1px solid silver;
+        }
+
+        #phone,#password{
+            width: 248px;
+        }
+
+        #yanzheng{
+            width: 118px;
+            margin-right: 10px;
+        }
+
+        #submit {
+            width: 120px;
+            height: 40px;
+            border: 1px solid silver;
+            padding: 0 ;
+            background: white;
+        }
+
+        #accept{
+            margin: 10px 70px;
+        }
+
+        #zhuce{
+            float: left;
+            width: 270px;
+            height: 40px;
+            /* padding: 10px; */
+            margin-left: 70px;
+            border: 1px solid silver;
+            background: white;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <fieldset>
+            <legend>百度注册表单</legend>
+            <div>
+                    <label for="phone">手机号</label>
+                    <input id="phone" type="text" placeholder="可用于登录和召回密码">
+                </div>
+                <div>
+                    <label for="password">密码</label>
+                    <input id="password" type="password" placeholder="密码">
+                </div>
+                <div>
+                    <label for="yanzheng">验证码</label>
+                    <input id="yanzheng" type="text" placeholder="验证码">
+                    <!-- <input id="submit" type="submit"> -->
+                    <button id="submit">获取短信验证码</button>
+                </div>
+                <div id="accept">
+                    <input type="checkbox" checked>阅读并接受《百度用户协议》
+                </div>
+                <button id="zhuce">注册</button>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

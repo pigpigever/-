@@ -323,11 +323,31 @@ body{
     padding: 0 28px;
 }
 
-#four > .content > p{
+#four > .content > .info{
+    max-width: 970px;
+    margin: 0 auto;
+    padding-bottom: 32px;
+}
+
+#four > .content > .info > p{
     padding-bottom: 20px;
     font-size: 18px;
-    line-height: 34px;
+    /* line-height: 34px; */
     color: #231f20;
+    text-align: left
+}
+
+@media screen and (max-width: 1024px){
+    #four > .content > .info{
+        max-width: 820px;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+
+    #four > .content > .info > p{
+        font-size: 16px;
+        line-height: 20px;
+    }
 }
 
 #footer{
