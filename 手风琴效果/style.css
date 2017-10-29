@@ -75,6 +75,6 @@
     overflow: auto;
 }
 
-.accordionMenu :target h2::before {
+.accordionMenu :target h2::before{
     border-color: transparent transparent transparent #fff;
 }
